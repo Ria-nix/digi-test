@@ -1,0 +1,35 @@
+@use "sass:math";
+
+$desktop-max-width: 1440px;
+$desktop-small-width: 1200px;
+$small-tablet-max-width: 992px;
+$tablet-max-width: 769px;
+$mobile-max-width: 500px;
+
+// Font-family
+$inter: "Inter", sans-serif;
+$pt-sans: "PT Sans", sans-serif;
+
+//Colors
+$color-black: #2b2a29;
+$primary: #ffffff;
+$yellow: #f5c150;
+$light-gray: #a3a3a3;
+$c-gray: #eeeeee;
+$c-red: #d30000;
+$b-gray: #e4e4e6;
+$bg-gray: #eeeeee;
+$gray: #e4e4e6;
+$red: #d30000;
+$dark-gray: #a3a3a3;
+$gray-medium: #dbdbdb;
+
+// FONT WEIGHT
+$normal: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extraBold: 800;
+$black: 900;
+
+$baseFontSize: 16px;
