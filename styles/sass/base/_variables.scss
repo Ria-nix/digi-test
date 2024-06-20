@@ -1,5 +1,7 @@
+@use "sass:math";
+
 $desktop-max-width: 1440px;
-$desktop-small-width: 1200px;
+$desktop-small-width: 1220px;
 $small-tablet-max-width: 992px;
 $tablet-max-width: 769px;
 $mobile-max-width: 500px;
@@ -10,21 +12,21 @@ $pt-sans: "PT Sans", sans-serif;
 
 //Colors
 $primary: #ffffff;
-$primaryLight: #F8F8FA;
+$primaryLight: #f8f8fa;
 $primaryDark: #000000;
 
-$secondaryDarkest: #7397F5;
-$secondaryDarker: #73AFF4;
-$secondary: #96C3F7;
-$secondaryLight: #E2EFFF;
+$secondaryDarkest: #7397f5;
+$secondaryDarker: #73aff4;
+$secondary: #96c3f7;
+$secondaryLight: #e2efff;
 
 $neutralDarkest: #333333;
 $neutralDarker: #393939;
-$neutrayDark: #5A5A5A;
-$neutral: #AAAAAA; 
-$neutralLight: #CBCBCB;
-$neutralLighter: #D5D5D5;
-$neutralLightest: #F2F2F2;
+$neutrayDark: #5a5a5a;
+$neutral: #aaaaaa;
+$neutralLight: #cbcbcb;
+$neutralLighter: #d5d5d5;
+$neutralLightest: #f2f2f2;
 
 // FONT WEIGHT
 $normal: 400;
@@ -35,3 +37,15 @@ $extraBold: 800;
 $black: 900;
 
 $baseFontSize: 16px;
+
+@function rem($pixels, $context: $baseFontSize) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return math.div($pixels, $context) * 1rem;
+}

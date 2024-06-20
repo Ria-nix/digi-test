@@ -35,11 +35,21 @@
   font-style: normal;
   font-display: swap;
 }
+html {
+  font-size: 16px;
+}
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 0.8333333333vw;
+  }
+}
+
 body {
-  min-width: 320px;
+  min-width: 20rem;
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 0;
   color: #000000;
@@ -54,6 +64,11 @@ body * {
 
 a {
   text-decoration: none;
+  color: #000000;
+  transition: all 0.2s ease;
+}
+a:hover {
+  color: #73aff4 !important;
 }
 
 input {
@@ -61,8 +76,427 @@ input {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  border-color: transparent;
+  border-radius: 0.5rem;
 }
 
 ul {
   list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 120rem;
+  width: 100%;
+  /* ------------------------------ main content ------------------------------ */
+  /* --------------------------------- sidebar -------------------------------- */
+  /* --------------------------------- content -------------------------------- */
+}
+.container .header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0.75rem 8rem;
+  background: #ffffff;
+  z-index: 5;
+}
+@media only screen and (max-width: 1219px) {
+  .container .header {
+    padding: 0.75rem 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container .header {
+    padding: 0.75rem 2.5rem;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .container .header {
+    padding: 0.75rem 1.25rem;
+  }
+}
+.container .header__logo-catalog-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .container .header__logo-catalog-wrap {
+    display: none;
+  }
+}
+.container .header__logo-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.container .header__logo-wrap:hover {
+  color: #73aff4;
+}
+.container .header__logo-wrap img {
+  width: 1.5rem;
+  height: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.container .header__logo-wrap p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.container .header__btn-catalog {
+  padding: 0.96875rem 1.5rem;
+  background: #ffffff;
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #000000;
+  border: 1px solid #73aff4;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.container .header__btn-catalog:hover {
+  background: #73aff4;
+  color: #ffffff;
+}
+.container .header__search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-left: auto;
+}
+@media only screen and (max-width: 768px) {
+  .container .header__search {
+    margin: 0;
+  }
+}
+.container .header__find, .container .header__go-back {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .container .header__find, .container .header__go-back {
+    display: block;
+  }
+}
+.container .header__find {
+  padding: 0.75rem 1rem;
+  background: #7397f5;
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 0.875rem;
+  border-radius: 0.3125rem;
+  border-color: transparent;
+  cursor: pointer;
+}
+.container .header__search-main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #73aff4;
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .container .header__search-main {
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    border-radius: 0;
+  }
+}
+.container .header__search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 0;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.container .header__search-input::-webkit-search-cancel-button {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: url("./../../img/cross.svg") no-repeat center;
+  background-size: contain;
+  -webkit-appearance: none;
+          appearance: none;
+  margin-right: -0.625rem;
+  cursor: pointer;
+}
+.container .header__search-input::-moz-placeholder {
+  color: #5a5a5a;
+}
+.container .header__search-input::placeholder {
+  color: #5a5a5a;
+}
+.container .header__search-loop {
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.container .header__search-loop img {
+  width: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media only screen and (max-width: 768px) {
+  .container .header__search-loop {
+    display: none;
+  }
+}
+.container .header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+}
+@media only screen and (max-width: 991px) {
+  .container .header .nav {
+    display: none;
+  }
+}
+.container .header .nav__item a {
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+.container main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2.25rem;
+  width: 100%;
+  padding: 0 6.25rem;
+}
+@media only screen and (max-width: 1219px) {
+  .container main {
+    padding: 0 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container main {
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .container main {
+    padding: 0 1.25rem;
+  }
+}
+.container .sidebar {
+  position: sticky;
+  top: 5rem;
+  max-width: 17.5rem;
+  width: 100%;
+  height: calc(100vh - 6.25rem);
+  border: 1px solid blue;
+}
+@media only screen and (max-width: 991px) {
+  .container .sidebar {
+    display: none;
+  }
+}
+.container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20.8125rem, 1fr));
+  gap: 1.5rem;
+  min-width: calc(100% - 19rem);
+  height: -moz-max-content;
+  height: max-content;
+  border: 1px solid violet;
+  margin-bottom: 1.25rem;
+}
+@media only screen and (max-width: 1439px) {
+  .container .content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container .content {
+    grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
+  }
+}
+@media only screen and (max-width: 499px) {
+  .container .content {
+    grid-template-columns: repeat(2, minmax(9.375rem, 10.3125rem));
+  }
+}
+
+/* ------------------------------- card styles ------------------------------ */
+.card-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+.card-product__look-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 12.5rem;
+  height: 100%;
+  background: #f8f8fa;
+}
+.card-product__look-wrap::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  content: "";
+  width: 3.75rem;
+  height: 3.75rem;
+  background: url("./../../img/box.svg") no-repeat center;
+  background-size: contain;
+}
+.card-product__hit-label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.5rem;
+  color: #333333;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
+  background: #ffffff;
+  border: 1px solid #f8f8fa;
+  border-radius: 0.25rem;
+}
+.card-product__hit-label img {
+  min-width: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.card-product__sale {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  display: inline-block;
+  padding: 0.375rem 0.625rem;
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 0.875rem;
+  background: #7397f5;
+  border-radius: 0.25rem;
+}
+.card-product__about-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.card-product .card-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.card-product .card-brand__name {
+  color: #aaaaaa;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.card-product .card-brand__desc {
+  color: #333333;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.card-product .card-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-product .card-price__current {
+  color: #333333;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+.card-product .card-price__old {
+  color: #aaaaaa;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.875rem;
+  text-decoration: line-through;
+}
+.card-product__btn-buy {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.75rem 1rem;
+  color: #7397f5;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 0.875rem;
+  border-radius: 0.25rem;
+  border: 1px solid #7397f5;
+}
+.card-product__btn-problem {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  color: #aaaaaa;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 0.875rem;
+  border-radius: 0.25rem;
+  border: 1px solid #aaaaaa;
 }/*# sourceMappingURL=main.css.map */
