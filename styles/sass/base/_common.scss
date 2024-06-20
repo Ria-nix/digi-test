@@ -26,27 +26,54 @@ body {
 }
 
 a {
+    position: relative;
     text-decoration: none;
     color: $primaryDark;
     transition: all 0.2s ease;
 
+    &::after{
+        position: absolute;
+        top: 90%;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: rem(1);
+        background: transparent;
+        transition: all 0.2s ease-in-out;
+        z-index: 6;
+    }
+    
     &:hover {
-        color: $secondaryDarker !important;
+        color: $secondaryDarker;
+
+        &:after{
+            top: 108%;
+            background: $secondaryDarker;
+        }
     }
 }
 
 input {
     outline: none;
     user-select: none;
-    border-color:  transparent;
+    border-color: transparent;
     border-radius: rem(8);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 ul {
     list-style: none;
 }
 
-button{
+button {
     background: none;
     border: none;
     cursor: pointer;

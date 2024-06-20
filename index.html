@@ -47,288 +47,456 @@
         <main>
             <!-- ------------------------------- sidebar ------------------------------- -->
             <div class="sidebar">
+                <ul class="sidebar__categories-list s-categories">
+                    <li class="s-categories__categories-item">
+                        <p>Название категории</p>
+                        <span>3</span>
+                    </li>
+                    <li class="s-categories__categories-item no-padding">
+                        <ul class="sidebar__categories-list">
+                            <li class="s-categories__categories-item">
+                                <p>Название категории</p>
+                                <span>3</span>
+                            </li>
+                            <li class="s-categories__categories-item">
+                                <p>Название категории</p>
+                                <span>3</span>
+                            </li>
+                            <li class="s-categories__categories-item _active">
+                                <p>Название категории</p>
+                                <span>3</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- -------------------------------- price -------------------------------- -->
+                <div class="sidebar__price s-price">
+                    <p class="sidebar__heading">Цена</p>
 
+                    <div class="s-price__fields-wrap">
+                        <label class="s-price__label">
+                            <span>от</span>
+                            <input type="number" name="" value="5 500 ₽" placeholder="5 500 ₽">
+                        </label>
+                        <span class="s-price__tick"></span>
+                        <label class="s-price__label">
+                            <span>от</span>
+                            <input type="number" name="" value="5 500 ₽" placeholder="5 500 ₽">
+                        </label>
+                    </div>
+                </div>
+                <!-- -------------------------------- brand -------------------------------- -->
+                <div class="sidebar__brand s-brand">
+                    <div class="s-brand__head">
+                        <p class="sidebar__heading">Бренд</p>
+                        <span class="s-brand__btn-clear">Очистить</span>
+                    </div>
+                    <label class="s-brand__brand-search">
+                        <span class="s-brand__loop">
+                            <img src="./img/little-loop.svg" alt="ltl-loop">
+                        </span>     
+                        <input type="text" placeholder="Поиск">
+                    </label>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num1" name="attributes-1" value="num1">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num2" name="attributes-1" value="num2">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num1" name="attributes-1" value="num1">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num2" name="attributes-1" value="num2">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num3" name="attributes-1" value="num3">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num3" name="attributes-1" value="num3">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num1" name="attributes-1" value="num1">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num2" name="attributes-1" value="num2">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num3" name="attributes-1" value="num3">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- -------------------------------- size --------------------------------- -->
+                <div class="sidebar__size s-size">
+                    <p class="sidebar__heading">Размер</p>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num4" name="attributes-2" value="num4">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num5" name="attributes-2" value="num5">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num6" name="attributes-2" value="num6">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num1" name="attributes-1" value="num1">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num2" name="attributes-1" value="num2">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <label class="sidebar__list-label">
+                                <input type="checkbox" id="num3" name="attributes-1" value="num3">
+                                <p>Атрибут</p>
+                                <span>3</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- ------------------------------- content ------------------------------- -->
             <div class="content">
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
+                <h1 class="content__heading">Название категории</h1>
+                <div class="content__cards-container">
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+                            <span class="card-product__sale">25%</span>
                         </div>
 
-                        <span class="card-product__sale">25%</span>
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                            <!-- <button class="card-product__btn-problem">Сообщить о поступлении</button> -->
+                        </div>
                     </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
 
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
+                            <span class="card-product__sale">25%</span>
                         </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
                         </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                        <!-- <button class="card-product__btn-problem">Сообщить о поступлении</button> -->
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+
+                            <span class="card-product__sale">25%</span>
+                        </div>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-problem">Сообщить о поступлении</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+                            <span class="card-product__sale">25%</span>
+                        </div>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+                            <span class="card-product__sale">25%</span>
+                        </div>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+                            <span class="card-product__sale">25%</span>
+                        </div>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+
+                            <span class="card-product__sale">25%</span>
+                        </div>
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+                            <span class="card-product__sale">25%</span>
+                        </div>
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+
+                            <span class="card-product__sale">25%</span>
+                        </div>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+
+                            <span class="card-product__sale">25%</span>
+                        </div>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+
+                            <span class="card-product__sale">25%</span>
+                        </div>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-product__look-wrap">
+                            <div class="card-product__hit-label">
+                                <p>Хит продаж</p>
+                                <img src="./img/hit.svg" alt="hit-img">
+                            </div>
+                            <span class="card-product__sale">25%</span>
+                        </div>
+
+                        <div class="card-product__about-wrap">
+                            <div class="card-product__brand-wrap card-brand">
+                                <p class="card-brand__name">Бренд</p>
+                                <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом
+                                    в
+                                    конце...</p>
+                            </div>
+                            <div class="card-product__price-wrap card-price">
+                                <p class="card-price__current">5 990 ₽</p>
+                                <p class="card-price__old">5 990 ₽</p>
+                            </div>
+                            <button class="card-product__btn-buy">Купить</button>
+                        </div>
                     </div>
                 </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-problem">Сообщить о поступлении</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="card-product__look-wrap">
-                        <div class="card-product__hit-label">
-                            <p>Хит продаж</p>
-                            <img src="./img/hit.svg" alt="hit-img">
-                        </div>
-                        <span class="card-product__sale">25%</span>
-                    </div>
-
-                    <div class="card-product__about-wrap">
-                        <div class="card-product__brand-wrap card-brand">
-                            <p class="card-brand__name">Бренд</p>
-                            <p class="card-brand__desc">Полное название товара в несколько строк для вида с обрывом в
-                                конце...</p>
-                        </div>
-                        <div class="card-product__price-wrap card-price">
-                            <p class="card-price__current">5 990 ₽</p>
-                            <p class="card-price__old">5 990 ₽</p>
-                        </div>
-                        <button class="card-product__btn-buy">Купить</button>
-                    </div>
-                </div>
-
-
             </div>
         </main>
     </div>

@@ -10,6 +10,10 @@
     max-width: rem(1920);
     width: 100%;
 
+    @include mediaMax($tablet-max-width) {
+        gap: rem(12);
+    }
+
     .header {
         position: sticky;
         top: 0;
@@ -20,13 +24,13 @@
         background: $primary;
         z-index: 5;
 
-        @include mediaMax($desktop-small-width){
+        @include mediaMax($desktop-small-width) {
             padding: rem(12) rem(80);
         }
-        @include mediaMax($tablet-max-width){
+        @include mediaMax($tablet-max-width) {
             padding: rem(12) rem(40);
         }
-        @include mediaMax($mobile-max-width){
+        @include mediaMax($mobile-max-width) {
             padding: rem(12) rem(16);
         }
 
@@ -70,7 +74,7 @@
             font-family: $inter;
             font-weight: $bold;
             color: $primaryDark;
-            border: 1px solid $secondaryDarker;
+            border: rem(1) solid $secondaryDarker;
             border-radius: rem(8);
             cursor: pointer;
             transition: all 0.4s ease;
@@ -87,7 +91,7 @@
             width: 100%;
             margin-left: auto;
 
-            @include mediaMax($tablet-max-width){
+            @include mediaMax($tablet-max-width) {
                 margin: 0;
             }
         }
@@ -118,12 +122,12 @@
             width: 100%;
             @include flexbox(row, flex-start, center);
             gap: rem(8);
-            border: 1px solid $secondaryDarker;
+            border: rem(1) solid $secondaryDarker;
             border-radius: rem(8);
 
-            @include mediaMax($tablet-max-width){
+            @include mediaMax($tablet-max-width) {
                 border: none;
-                border-bottom: 1px solid $neutralLighter;
+                border-bottom: rem(1) solid $neutralLighter;
                 border-radius: 0;
             }
         }
@@ -165,7 +169,7 @@
                 object-fit: contain;
             }
 
-            @include mediaMax($tablet-max-width){
+            @include mediaMax($tablet-max-width) {
                 display: none;
             }
         }
@@ -193,13 +197,13 @@
         width: 100%;
         padding: 0 rem(100);
 
-        @include mediaMax($desktop-small-width){
+        @include mediaMax($desktop-small-width) {
             padding: 0 rem(80);
         }
-        @include mediaMax($tablet-max-width){
+        @include mediaMax($tablet-max-width) {
             padding: 0 rem(40);
         }
-        @include mediaMax($mobile-max-width){
+        @include mediaMax($mobile-max-width) {
             padding: 0 rem(16);
         }
     }
@@ -208,35 +212,281 @@
     .sidebar {
         position: sticky;
         top: rem(80);
+        @include flexbox(column, flex-start, flex-start);
+        gap: rem(28);
         max-width: rem(280px);
         width: 100%;
-        height: calc(100vh - rem(100));
-        border: 1px solid blue;
+        margin-bottom: rem(30);
 
-        @include mediaMax($small-tablet-max-width){
+        @include mediaMax($small-tablet-max-width) {
             display: none;
         }
+
+        &__heading {
+            font-family: $pt-sans;
+            font-size: rem(16);
+            font-weight: $bold;
+            line-height: rem(20);
+        }
+
+        &__list {
+            @include flexbox(column, flex-start, flex-start);
+            gap: rem(12);
+            width: 100%;
+            max-height: rem(180);
+            overflow-y: auto;
+            overflow-x: hidden;
+    
+            &::-webkit-scrollbar {
+                width: rem(3);
+                border-radius: rem(10);
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $neutralLight;
+            }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+        }
+
+        &__list-item {
+            width: 100%;
+        }
+        &__list-label {
+            @include flexbox(row, flex-start, center);
+            gap: rem(12);
+            width: 100%;
+            padding-right: rem(16);
+            cursor: pointer;
+
+            & > input {
+                position: relative;
+                appearance: none;
+                width: rem(20);
+                height: rem(20);
+                border-radius: rem(3);
+                border: rem(1) solid $neutralLighter;
+
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    display: none;
+                    content: "";
+                    transform: translate(-50%, -50%);
+                    width: rem(11);
+                    height: rem(9);
+                    background: url("./../../img/tick.svg") no-repeat center;
+                    background-size: contain;
+                }
+
+                &:checked {
+                    background: $secondaryDarkest;
+                    border-color: $secondaryDarkest;
+
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+
+            & p {
+                font-family: $pt-sans;
+                font-size: rem(14);
+                font-weight: $normal;
+                line-height: rem(16);
+            }
+
+            & span {
+                color: $neutral;
+                font-family: $pt-sans;
+                font-size: rem(12);
+                font-weight: $normal;
+                line-height: rem(14);
+                margin-left: auto;
+            }
+        }
+    }
+
+    .s-categories {
+        @include flexbox(column, flex-start, flex-start);
+        width: 100%;
+
+        &__categories-item {
+            @include flexbox(row, space-between, center);
+            width: 100%;
+            padding: rem(8);
+            border-radius: rem(5);
+
+            &.no-padding {
+                padding: 0;
+            }
+
+            &._active {
+                background: $secondaryLight;
+                & span {
+                    color: $neutralDarkest;
+                }
+            }
+
+            & p {
+                color: $neutralDarkest;
+                font-family: $pt-sans;
+                font-size: rem(14);
+                font-weight: $normal;
+                line-height: rem(16);
+            }
+
+            & span {
+                color: $neutral;
+                font-family: $pt-sans;
+                font-size: rem(12);
+                font-weight: $normal;
+                line-height: rem(14);
+            }
+        }
+
+        & ul {
+            @include flexbox(column, flex-start, flex-start);
+            width: 100%;
+
+            & .s-categories__categories-item {
+                padding: rem(8) rem(8) rem(8) rem(24);
+            }
+        }
+    }
+
+    .s-price {
+        @include flexbox(column, flex-start, center);
+        gap: rem(16);
+        width: 100%;
+
+        &__fields-wrap {
+            @include flexbox(row, space-between, center);
+            gap: rem(16);
+            width: 100%;
+
+            & span {
+                color: $neutral;
+                font-family: $pt-sans;
+                font-size: rem(12);
+                font-weight: $normal;
+                line-height: rem(14);
+            }
+        }
+
+        &__tick {
+            width: rem(10);
+            height: rem(1);
+            background: $neutral;
+        }
+
+        &__label {
+            @include flexbox(row, flex-start, center);
+            gap: rem(6);
+            max-width: rem(120);
+            width: 100%;
+            border: rem(1) solid $neutralLighter;
+            padding: rem(10) rem(8);
+            border-radius: rem(4);
+
+            & input {
+                color: $primaryDark;
+                width: rem(80);
+            }
+        }
+    }
+
+    .s-brand {
+        @include flexbox(column, flex-start, flex-start);
+        gap: rem(16);
+        width: 100%;
+
+        &__head {
+            @include flexbox(row, space-between, center);
+            gap: rem(10);
+            width: 100%;
+        }
+
+        &__btn-clear {
+            color: $neutral;
+            font-family: $pt-sans;
+            font-size: rem(12);
+            font-weight: $normal;
+            line-height: rem(12);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &__brand-search {
+            @include flexbox(row, flex-start, center);
+            gap: rem(8);
+            width: 100%;
+            border: rem(1) solid $neutralLighter;
+            border-radius: rem(4);
+            padding: rem(10) rem(12);
+
+            & input {
+                position: relative;
+                width: calc(100% - rem(40));
+                color: $primaryDark;
+                font-family: $pt-sans;
+                font-size: rem(14);
+                font-weight: $normal;
+                line-height: rem(16);
+
+                &::placeholder {
+                    color: $neutral;
+                    font-size: rem(14);
+                    line-height: rem(16);
+                }
+            }
+        }
+    }
+
+    .s-size{
+        @include flexbox(column, flex-start, center);
+        gap: rem(16);
+        width: 100%;
     }
 
     /* --------------------------------- content -------------------------------- */
     .content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr));
-        gap: rem(24);
-        min-width: calc(100% - rem(304));
-        height: max-content;
-        margin-bottom: rem(20);
-        
-        @include mediaMax($desktop-max-width){
-            grid-template-columns: repeat(3, 1fr);
+        @include flexbox(column, flex-start, flex-start);
+        gap: rem(12);
+
+        &__heading {
+            display: inline;
+            color: $neutralDarkest;
+            font-family: $pt-sans;
+            font-size: rem(22);
+            font-weight: $normal;
+            line-height: rem(28);
+
+            @include mediaMin($tablet-max-width) {
+                display: none;
+            }
         }
-        @include mediaMax($tablet-max-width){
-            grid-template-columns: repeat(auto-fit, minmax(rem(165), 1fr));
-        }
-        @include mediaMax($mobile-max-width){
-            column-gap: rem(16);
-            row-gap: rem(12);
-            min-width: 100%;
+
+        &__cards-container {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(rem(333), 1fr));
+            gap: rem(24);
+            min-width: calc(100% - rem(304));
+            height: max-content;
+            margin-bottom: rem(20);
+
+            @include mediaMax($desktop-max-width) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @include mediaMax($tablet-max-width) {
+                column-gap: rem(16);
+                row-gap: rem(12);
+                min-width: 100%;
+            }
+            @include mediaMax($mobile-max-width) {
+                grid-template-columns: repeat(2, minmax(rem(120), 1fr));
+            }
         }
     }
 }
@@ -248,24 +498,31 @@
     width: 100%;
     max-height: max-content;
 
-
+    &:hover{
+        .card-product__look-wrap:before{
+            transform: scale(1.5) translate(-30%, -30%);
+        }
+    }
+    
     &__look-wrap {
         position: relative;
         width: 100%;
         min-height: rem(200);
         background: $primaryLight;
+        cursor: pointer;
 
         &::before {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
             display: block;
             content: "";
             width: rem(60);
             height: rem(60);
             background: url("./../../img/box.svg") no-repeat center;
             background-size: contain;
+            transition: all 0.5s ease-in-out;
         }
     }
 
@@ -282,7 +539,7 @@
         font-weight: $normal;
         line-height: rem(16);
         background: $primary;
-        border: 1px solid $primaryLight;
+        border: rem(1) solid $primaryLight;
         border-radius: rem(4);
 
         & img {
@@ -292,8 +549,7 @@
             object-fit: contain;
         }
 
-        @include mediaMax($mobile-max-width){
-
+        @include mediaMax($mobile-max-width) {
         }
     }
 
@@ -370,8 +626,15 @@
         font-weight: $bold;
         line-height: rem(14);
         border-radius: rem(4);
-        border: 1px solid $secondaryDarkest;
+        border: rem(1) solid $secondaryDarkest;
         margin-top: auto;
+        transition: all 0.3s ease;
+
+        &:hover{
+            background: $secondaryDarkest;
+            color: $primary;
+            border-color: transparent;
+        }
     }
 
     &__btn-problem {
@@ -383,6 +646,13 @@
         font-weight: $bold;
         line-height: rem(14);
         border-radius: rem(4);
-        border: 1px solid $neutral;
+        border: rem(1) solid $neutral;
+        transition: all 0.3s ease;
+
+        &:hover{
+            background: $neutral;
+            color: $primary;
+            border-color: transparent;
+        }
     }
 }
