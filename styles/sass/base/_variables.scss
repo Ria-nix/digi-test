@@ -1,5 +1,3 @@
-@use "sass:math";
-
 $desktop-max-width: 1440px;
 $desktop-small-width: 1200px;
 $small-tablet-max-width: 992px;
@@ -11,18 +9,22 @@ $inter: "Inter", sans-serif;
 $pt-sans: "PT Sans", sans-serif;
 
 //Colors
-$color-black: #2b2a29;
 $primary: #ffffff;
-$yellow: #f5c150;
-$light-gray: #a3a3a3;
-$c-gray: #eeeeee;
-$c-red: #d30000;
-$b-gray: #e4e4e6;
-$bg-gray: #eeeeee;
-$gray: #e4e4e6;
-$red: #d30000;
-$dark-gray: #a3a3a3;
-$gray-medium: #dbdbdb;
+$primaryLight: #F8F8FA;
+$primaryDark: #000000;
+
+$secondaryDarkest: #7397F5;
+$secondaryDarker: #73AFF4;
+$secondary: #96C3F7;
+$secondaryLight: #E2EFFF;
+
+$neutralDarkest: #333333;
+$neutralDarker: #393939;
+$neutrayDark: #5A5A5A;
+$neutral: #AAAAAA; 
+$neutralLight: #CBCBCB;
+$neutralLighter: #D5D5D5;
+$neutralLightest: #F2F2F2;
 
 // FONT WEIGHT
 $normal: 400;

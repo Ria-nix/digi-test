@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/css/main.css">
     <title>Поисковая выдача с категориями и фильтрами</title>
 </head>
+
 <body>
-    <!-- <include src="./templates/base/header.html"></include> -->
+    <header>
+        <div class="header__logo-wrap">
+            <img src="./img/logo.svg" alt="logo">
+            <p>Логотип</p>
+        </div>
+        <button class="header__btn-catalog">Каталог</button>
+        <div class="header__search">
+            <div class="header__go-back">
+                <img src="./img/arrow-left.svg" alt="arrow-left">
+            </div>
+
+            <input type="search" placeholder="Поиск по 100 000 товаров" class="header__search-input">
+            <button class="header__find">Найти</button>
+        </div>
+        <ul class="header__nav nav">
+            <li class="nav__item">
+                <a href="#about-company">Информация о компании</a>
+            </li>
+            <li class="nav__item">
+                <a href="#contacts">Контакты</a>
+            </li>
+            <li class="nav__item"><a href="#healty-links">Полезные ссылки</a>
+            </li>
+        </ul>
+    </header>
     <main>
         <!-- <include src="./templates/content.html"></include> -->
     </main>
     <!-- <include src="./templates/base/scripts.html"></include> -->
 </body>
+
 </html>

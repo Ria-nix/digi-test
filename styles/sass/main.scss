@@ -1,8 +1,5 @@
-body{
-    background: red;
+@import "base/_fonts";
+@import "base/_variables";
+@import "base/_mixin";
+@import "base/_common";
 
-    h1{
-        color: white;         
-        
-    }
-}

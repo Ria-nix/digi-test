@@ -1,23 +1,13 @@
-html {
-    font-family: $pt-sans;
-    font-size: $baseFontSize;
-
-    //   @include mediaMin($desktop-max-width) {
-    //     font-size: calc(16 / (1920 / 100) * 1vw);
-    //   }
-}
-
 body {
-    min-width: rem(320);
+    min-width: 320px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
-
-    font-family: "Oswald", sans-serif;
-    color: $color-black;
-    background-color: $color-white;
+    color: $primaryDark;
+    font-family: $pt-sans;
+    background-color: $primary;
 
     * {
         margin: 0;
@@ -25,12 +15,6 @@ body {
         box-sizing: border-box;
     }
 }
-
-// body.no-scroll-no-fixed {
-//     overflow: hidden;
-//     width: 100%;
-//     height: 100%;
-// }
 
 a {
     text-decoration: none;
